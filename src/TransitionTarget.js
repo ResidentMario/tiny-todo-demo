@@ -1,12 +1,8 @@
 import React from 'react';
-import TransitionAnim from './TransitionAnim';
+import TransitionAmin from './TransitionAnim';
 
 
-class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {display_text: false}
-    }
+class TransitionTarget extends React.Component {
 
     render() {
         return (
@@ -14,7 +10,7 @@ class App extends React.Component {
                 <button onClick={() => {this.setState({display_text: !this.state.display_text})}}>
                     Toggle
                 </button>
-                <TransitionAnim in={this.state.display_text}/>
+                <div className="target"><TransitionAmin/></div>
             </div>
         )
     }
