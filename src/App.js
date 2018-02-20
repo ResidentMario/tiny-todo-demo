@@ -1,6 +1,9 @@
 import React from 'react';
 import Card from './Card';
 import CardBuilder from './CardBuilder';
+import TransitionGroup from 'react-transition-group/TransitionGroup'
+import FadeAndSlideTransition from './FadeAndSlideTransition'
+
 
 class App extends React.Component {
     constructor(props) {
@@ -9,19 +12,25 @@ class App extends React.Component {
     }
 
     render() {
-        let cards = this.state.cards.map(p => <Card text={"HELLO WORLD"}/>);
+        let cards = this.state.cards.map(p =>
+                <Card text={"HELLO WORLD"}/>
+        );
 
-        return (<div className="app-frame">
-            <CardBuilder onClickCreate={() => {
-                this.setState({
-                    cards: [...this.state.cards,"Howdy"]
-                });
-            }}
-                         onClickDelete={() => console.log("WORLD")}/>
-            <div className="cardholder-frame">
-                {cards}
+        return (
+            <div className="app-frame">
+                <CardBuilder onClickCreate={() => {
+                    this.setState({
+                        cards: [...this.state.cards,"Howdy"]
+                    });
+                }}
+                             onClickDelete={() => console.log("WORLD")}/>
+                <div className="cardholder-frame">
+                    <TransitionGroup>
+                        {cards}
+                    </TransitionGroup>
+                </div>
             </div>
-        </div>)
+        )
     }
 }
 
