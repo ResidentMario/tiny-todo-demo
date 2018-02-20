@@ -1,0 +1,32 @@
+.app-frame {
+    width:75%;
+    height:50%;
+    border: 1px solid gray;
+    box-shadow: 0 0 10px gray;
+    margin:auto;
+    padding:10px;
+}
+.card-builder-frame {
+    width:100%;
+    height:30px;
+    vertical-align:middle;
+}
+.button-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translate(-50%);
+}
+.card {
+    height: 60px;
+    width: 400px;
+    background: lightsteelblue;
+    border: 1px solid steelblue;
+    border-radius:5px;
+    text-align:center;
+    vertical-align:center;
+    font-family:Roboto, sans-serif;
+    padding:10px;
+    padding-top:25px;
+    margin-bottom:10px;
+}
